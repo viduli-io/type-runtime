@@ -21,7 +21,10 @@ const propNames = carType.properties.map(p => p.name)
 console.log(propNames) // prints [ 'color', 'price', 'weight' ]
 ```
 
-It is possible to use this kind of reflection for dependency injection,
+Types such as interfaces, unions, intersections and aliases that are erased
+normally can be introspected when compiled using type-runtime.
+
+This kind of reflection can be used to implement dependency injection,
 inversion of control, validation, json deserialization, etc.
 
 [//]: # 'In fact, Type runtime was created to enable those features in Elevate.'
@@ -101,7 +104,7 @@ Represents one of the 6 possible primitive types, `string`, `number`, `boolean`,
 
 - `kind: 'Primitive'`
 - `name: string` - one of the above 6 possibilities.
-- `is(other: Type): boolean` - returns true is the type is exactly the primitive
+- `is(other: Type): boolean` - returns true if the type is exactly the primitive
   type. Returns false for literal types of the same primitive.
 
 ```ts
