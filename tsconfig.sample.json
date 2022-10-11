@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "importHelpers": true,
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "declaration": true,
+    "types": ["node"],
+    "useDefineForClassFields": false,
+    "outDir": "out",
+    "rootDir": "samples"
+  }
+}
